@@ -3,9 +3,9 @@
 # shellcheck disable=SC2086
 
 set -eE
-confhome=https://raw.githubusercontent.com/bin456789/reinstall/main
-confhome_cn=https://www.ghproxy.cc/https://raw.githubusercontent.com/bin456789/reinstall/main
-# confhome_cn=https://jihulab.com/bin456789/reinstall/-/raw/main
+confhome=https://raw.githubusercontent.com/momo-z/reinstall/main
+confhome_cn=https://www.ghproxy.cc/https://raw.githubusercontent.com/momo-z/reinstall/main
+# confhome_cn=https://jihulab.com/momo-z/reinstall/-/raw/main
 
 # 用于判断 reinstall.sh 和 trans.sh 是否兼容
 SCRIPT_VERSION=4BACD833-A585-23BA-6CBB-9AA4E08E0002
@@ -65,7 +65,7 @@ Usage: $reinstall_____ centos      9
                        [--web-port PORT]
                        [--allow-ping]
 
-Manual: https://github.com/bin456789/reinstall
+Manual: https://github.com/momo-z/reinstall
 
 EOF
     exit 1
@@ -3348,7 +3348,7 @@ if is_secure_boot_enabled; then
 fi
 
 # 密码
-if ! is_netboot_xyz && [ -z "$password" ]; then
+if ! is_netboot_xyz && [ -z "$pw" ]; then
     if is_use_dd; then
         echo "
 This password is only used for SSH access to view logs during the DD process.
