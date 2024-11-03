@@ -3359,7 +3359,7 @@ if is_secure_boot_enabled; then
 fi
 
 # 密码
-if ! is_netboot_xyz && [ -z "$pw" ]; then
+if ! is_netboot_xyz && [ -z "$password" ]; then
     if is_use_dd; then
         echo "
 This password is only used for SSH access to view logs during the DD process.
