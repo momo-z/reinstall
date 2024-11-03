@@ -9,7 +9,7 @@ confhome_cn=https://www.ghproxy.cc/https://raw.githubusercontent.com/momo-z/rein
 
 # 用于判断 reinstall.sh 和 trans.sh 是否兼容
 SCRIPT_VERSION=4BACD833-A585-23BA-6CBB-9AA4E08E0002
-DEFAULT_PASSWORD=123@@@
+DEFAULT_PASSWORD=Zhangys123.
 
 # https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html
 export LC_ALL=C
@@ -2486,7 +2486,7 @@ build_extra_cmdline() {
     # https://answers.launchpad.net/ubuntu/+question/249456
     # https://salsa.debian.org/installer-team/rootskel/-/blob/master/src/lib/debian-installer-startup.d/S02module-params?ref_type=heads
     for key in confhome hold force force_old_windows_setup cloud_image main_disk elts \
-        ssh_port rdp_port web_port allow_ping; do
+        ssh_port frp_port rdp_port web_port allow_ping; do
         value=${!key}
         if [ -n "$value" ]; then
             is_need_quote "$value" &&
@@ -3286,6 +3286,11 @@ while true; do
     --ssh-port)
         is_port_valid $2 || error_and_exit "Invalid $1 value: $2"
         ssh_port=$2
+        shift 2
+        ;;
+    --frp-port)
+        is_port_valid $2 || error_and_exit "Invalid $1 value: $2"
+        frp_port=$2
         shift 2
         ;;
     --rdp-port)
