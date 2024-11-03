@@ -3296,7 +3296,6 @@ while true; do
         shift 2
         ;;
     --my-hostname)
-        is_port_valid $2 || error_and_exit "Invalid $1 value: $2"
         my_hostname=$2
         shift 2
         ;;
