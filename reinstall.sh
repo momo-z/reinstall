@@ -3220,6 +3220,8 @@ for o in ci installer debug minimal allow-ping \
     passwd: password: \
     ssh-port: \
     rdp-port: \
+    frp-port: \
+    my-hostname: \
     web-port: http-port: \
     allow-ping: \
     commit: \
